@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto-Complete using AJAX</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="javaScript.js"></script>
+</head>
+<body onload="init()">
+    <h1>Auto-Complete using AJAX</h1>
+    <form name="autofillform" action="autocomplete">
+        <table border="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Composer Name:</strong></td>
+                    <td></td> <!-- Add a closing tag for this <td> -->
+                </tr> <!-- Close the Composer Name row -->
+                <tr>
+                    <td id="auto-row" colspan="2">
+                        <table id="complete-table"></table> <!-- Remove the self-closing slash (/) -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text"
+                               size="40"
+                               id="complete-field"
+                               onkeyup="doCompletion();">
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
